@@ -37,6 +37,9 @@ gcloud compute instance-templates create web-server-template \
           --network nucleus-vpc \
           --machine-type g1-small \
           --region us-east1
+         
+gcloud compute target-pools create nginx-pool
+
 gcloud compute instance-groups managed create web-server-group \
           --base-instance-name web-server \
           --size 2 \
